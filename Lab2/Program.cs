@@ -24,7 +24,7 @@ namespace Lab2
                     }
                 }
             }
-            finally { };
+            catch { };
         }
 
 

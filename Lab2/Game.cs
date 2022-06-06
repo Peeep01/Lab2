@@ -14,7 +14,6 @@ namespace Lab2
         //Колода робота
         public Player Player2 { get; }
 
-
         //Массив из которого будет производиться выборка чисел привязанных к опр картам
         public int[] carts = new int[]
         {
@@ -37,7 +36,6 @@ namespace Lab2
             return carts[random.Next(0, carts.Length)];
 
         }
-
         public Game(Player gamer1, Player gamer2)
         {
             try
@@ -160,16 +158,8 @@ namespace Lab2
 
             //Результаты
             string rez = GameIf(Player1, Player2);
-            //Сравнение и вывод итога
-            if (Player1.VarPlayer1 > Player2.VarPlayer2)
-            {
-                return ("Вы победили!");
-            }
-            if (Player1.VarPlayer1 < Player2.VarPlayer2) ;
-            {
-                return ("Вы проиграли");
-            }
-
+            Itog itog = new Itog();
+            return itog.chek(Player1.VarPlayer1, Player2.VarPlayer2);
         }
         static string GameIf(Player player1, Player player2)
         {
